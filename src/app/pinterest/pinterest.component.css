@@ -1,0 +1,42 @@
+.containar{
+    /* width: 100%;
+    height: 100%; */
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+
+}
+.card{
+    width: 350px;
+    height: 250px;
+    background-color: black;
+    position: relative;
+   
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+.images:hover~.author{
+    display: block;
+}
+.images:hover~.btn{
+    display: block;
+}
+.author{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 100px;
+    color: blue;
+    font-size: x-large;
+    font-weight: 900px;
+    display: none;
+}
+.btn{
+    width: 100px;
+    display: none;
+    position: absolute;
+    
+}

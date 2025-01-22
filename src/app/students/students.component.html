@@ -1,0 +1,45 @@
+<h1>students works!</h1>
+<input type="text" placeholder="search student" />
+<input type="text" placeholder="search student" />
+<input type="text" placeholder="search student" />
+<input type="text" placeholder="search student" /><br><br>
+
+<div class="parent">
+  <div class="child" *ngFor="let students of students">
+    <div class="card">
+        <div class="top">
+    
+    <img class="img1" src="{{ students.school_logo }}"alt="" /> &nbsp;&nbsp;&nbsp;
+    <h3>{{students.school_name}}</h3> 
+</div>
+
+<div class="mid">
+    <div class="midleft"> 
+        <p>{{students.name}}</p>
+        <p>{{students.phone}}</p>
+        <p>{{students.city}}</p>
+        <p>{{students.dob}}</p>
+        <p>{{students.email}}</p>
+    </div>
+    <div class="midright">
+    
+        <img class="img2" src="{{ students.profile_picture }}"alt="" />
+    </div>
+</div>
+
+<div class="bottom">
+    <p>{{students.school_city}}</p>
+<p>{{students.school_pin}}</p>
+  </div>
+  <div class="btndn">
+    <button>View</button>
+    <button>Edit</button>
+    <button>Delete</button>
+    
+  </div>
+</div>
+</div>
+</div>
+      
+          
+

@@ -1,0 +1,19 @@
+.head{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(232, 199, 204);
+    display: flex;  
+    flex-wrap: wrap;
+    
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: gray;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    
+}

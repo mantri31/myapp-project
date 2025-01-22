@@ -1,0 +1,12 @@
+<h1 style="text-align: center;">Blogs</h1>
+<div class="parent" >
+    
+    <div class="card" *ngFor="let blog of blog">
+        <p style="font-weight: 900;">{{blog.title}}</p>
+        <p>{{blog.author}} | {{blog.date_published}}</p>
+        
+        <p>{{blog.content}}</p>
+
+    </div>
+
+</div>

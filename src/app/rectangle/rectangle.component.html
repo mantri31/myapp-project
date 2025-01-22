@@ -1,0 +1,46 @@
+<div>
+    <h1>Rectangle Calculator</h1>
+    <label for="length">Length:</label>
+    <input type="number" [(ngModel)] ="a"><br>
+    
+    <label for="breadth">Breadth:</label>
+    <input type="number" [(ngModel)] ="b"> <br>
+    
+    <button (click)="area()">Calculate Area</button>
+    <button (click)="perimeter()">Calculate Perimeter</button>
+    <h3>result is : {{result}}</h3>
+  </div>
+
+  <script>
+    // Function to calculate the area of the rectangle
+    function calculateArea() {
+      const length = document.getElementById("length").value;
+      const breadth = document.getElementById("breadth").value;
+
+      // Check if inputs are valid
+      if (length === "" || breadth === "" || isNaN(length) || isNaN(breadth)) {
+        document.getElementById("result").innerText = "Please enter valid numbers!";
+        return;
+      }
+
+      const area = length * breadth; // Calculate area
+      document.getElementById("result").innerText = Area is: ${area}; // Display result
+    }
+
+    // Function to calculate the perimeter of the rectangle
+    function calculatePerimeter() {
+      const length = document.getElementById("length").value;
+      const breadth = document.getElementById("breadth").value;
+
+      // Check if inputs are valid
+      if (length === "" || breadth === "" || isNaN(length) || isNaN(breadth)) {
+        document.getElementById("result").innerText = "Please enter valid numbers!";
+        return;
+      }
+
+      const perimeter = 2 * (parseFloat(length) + parseFloat(breadth)); // Calculate perimeter
+      document.getElementById("result").innerText = Perimeter is: ${perimeter}; // Display result
+    }
+  </script>
+
+

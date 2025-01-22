@@ -1,0 +1,17 @@
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+}
+.child{
+    width: 400px;
+    height: 300px;
+    background-color: aqua;
+}
+.img1{
+    width: 90px;
+    height: 70px;
+}
+.img2{
+    width: 90px;
+    height: 70px;
+}

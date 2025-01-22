@@ -1,0 +1,51 @@
+<h1>Directives</h1>
+<h2>{{ age }}</h2>
+<h3 *ngFor="let age of ages">My age is: {{ age }}</h3>
+
+<h4>Telangana</h4>
+
+<ol>
+  <li *ngFor="let state of states">{{ state }}</li>
+</ol>
+<ul>
+  <li *ngFor="let state of states">{{ state }}</li>
+</ul>
+
+<select name="" id="">
+  <option value="" *ngFor="let state of states">{{ state }}</option>
+</select>
+
+<h3 *ngFor="let product of products">
+  {{ product.productName }} cost is : {{ product.price }}
+</h3>
+
+<table border="1" [cellPadding]="10" [cellSpacing]="0">
+  <thead>
+    <tr>
+      <th>S No</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{product.productName}}</td>
+      <!-- <td [ngStyle]="{'color':product.price<=50000 ? 'green':'red'}">{{product.price}}</td> -->
+      <td [ngClass]="{'green':product.price<=50000,'red':product.price>1000000}">{{product.price}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+<h2 *ngIf="true">HI Team</h2>
+<h2 *ngIf="false">Venkat</h2>
+
+<h1>{{today}}</h1>
+<h1>{{today | date}}</h1>
+<h1>{{today | date:"dd/MM/yyyy"}}</h1>
+<h1>{{today | date:"yyyy-MM-dd"}}</h1>
+<h3>{{today | date:'hh:mm':'IST'}}</h3>
+
+
+

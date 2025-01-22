@@ -1,0 +1,22 @@
+<!-- <h1>Mail</h1> -->
+
+    
+<img src="{{mail.image}}" alt="">
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let mail of mail">
+            <td>{{ mail.id}}</td>
+            <td [ngClass]="{'read':mail.completed==true,'unread':mail.completed==false}">{{ mail.title}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+

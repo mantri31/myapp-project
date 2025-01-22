@@ -1,0 +1,40 @@
+<div>
+    <h1>Circle Calculator</h1>
+    <label for="">Radius:</label>
+    <input type="number" [(ngModel)]="b">
+    <br><br>
+    <button (click)="CircleArea()">Calculate Area</button>
+    <button (click)="CirclePerimeter()">Calculate Perimeter</button>
+    <h2> Result is :{{result}}</h2>
+  </div>
+
+   <script>
+    function calculateCircleArea() {
+      const radius = parseFloat(document.getElementById("radius").value);
+
+      // Validation
+      if (isNaN(radius) || radius <= 0) {
+        alert("Please enter a valid positive number!");
+        return;
+      }
+
+      // Calculate Area
+      const area = Math.PI * radius * radius;
+      document.getElementById("result").innerText = Result;
+    }
+
+    function calculateCirclePerimeter() {
+      const radius = parseFloat(document.getElementById("radius").value);
+
+      // Validation
+      if (isNaN(radius) || radius <= 0) {
+        alert("Please enter a valid positive number!");
+        return;
+      }
+
+      // Calculate Perimeter
+      const perimeter = 2 * Math.PI * radius;
+      document.getElementById("result").innerText = Result;
+    }
+  </script>
+

@@ -1,0 +1,15 @@
+
+<div class="parent">
+    <h1>IMDB Movies</h1>
+    <div class="card" *ngFor="let imdb of imdb">
+        <img src="{{imdb.image}}" alt="">
+        <div class="mov" >
+            <h4 style="color: gold;">{{imdb.movie}}</h4>
+        <p style="color: white;">Rating: {{imdb.rating}} ⭐⭐⭐⭐⭐⭐⭐⭐⭐</p>
+        <!-- <p style="color: rgb(230, 230, 61);">{{imdb.imdb_url}}</p> -->
+        <a class="btn btn-warning" style="background-color: black; color: gold;" href="{{imdb.imdb_url}}">View on IMDB</a>
+
+        </div>
+
+    </div>
+</div>
