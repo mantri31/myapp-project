@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       (data:any)=>{
         console.log(data);
         alert("login Successfully!");
+        sessionStorage.setItem('token', data.token)
         this._router.navigateByUrl("/myapp-project") 
       },(err:any)=>{
         alert("Inv")

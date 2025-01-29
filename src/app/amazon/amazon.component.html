@@ -2,7 +2,9 @@
 <div class="containar">
   <div class="card" *ngFor="let amazon of amazon">
     <img src="{{ amazon.image }}" alt="" />
-    <div style="background-color: gray; width: 50px; height: 20px; position: relative;">&star; {{amazon.rating.rate}}</div>
+    <div style="background-color: gray; width: 150px; height: 50px; position: relative;">
+      <app-rating [rating]="amazon.rating.rate"></app-rating>
+    </div>
     <div class="details">
     <h3 style="color: black;">{{ amazon.category.slice(0,25)}}</h3>
       <p style="font-style: bold;">{{ amazon.title}}</p> 

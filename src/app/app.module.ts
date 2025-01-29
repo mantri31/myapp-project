@@ -26,12 +26,22 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentsComponent } from './students/students.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { TaskComponent } from './task/task.component';
 import { LoginComponent } from './login/login.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     MyappProjectComponent,
     HomeComponent,
@@ -57,7 +67,16 @@ import { LoginComponent } from './login/login.component';
     StudentsComponent,
     CreateUserComponent,
     TaskComponent,
-      LoginComponent
+      LoginComponent,
+      VehicleDetailsComponent,
+      HooksComponent,
+      Sibling1Component,
+      Sibling2Component,
+      ParentComponent,
+      ChildComponent,
+      RatingComponent,
+      CapitalDirective,
+      BalancePipe
    ],
   imports: [
     BrowserModule,
@@ -68,7 +87,13 @@ import { LoginComponent } from './login/login.component';
   
     
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

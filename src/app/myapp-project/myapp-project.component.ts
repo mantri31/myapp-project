@@ -11,6 +11,7 @@ export class MyappProjectComponent {
   constructor(private _router:Router){}
 
   logout(){
+    sessionStorage.removeItem('token');
     alert("Logout Successfully!");
     this._router.navigateByUrl("/login");
   }

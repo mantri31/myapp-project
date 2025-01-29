@@ -1,0 +1,9 @@
+<!-- <p>sibling1 works!</p>
+
+<input type="number" [(ngModel)]="count" (keyup)="send()"> -->
+
+<textarea cols="60" rows="5" (input)="onTextChange($event)" [(ngModel)]="text" maxlength="{{max}}"></textarea>
+<div>{{textCount}}/{{max}}</div>
+<h4 *ngIf="textCount==max" class="text-danger">You have reached max charactor limit</h4>
+
+<!-- <app-sibling2></app-sibling2> -->

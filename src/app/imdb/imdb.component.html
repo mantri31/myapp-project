@@ -5,7 +5,9 @@
         <img src="{{imdb.image}}" alt="">
         <div class="mov" >
             <h4 style="color: gold;">{{imdb.movie}}</h4>
-        <p style="color: white;">Rating: {{imdb.rating}} ⭐⭐⭐⭐⭐⭐⭐⭐⭐</p>
+        <p style="color: white;">Rating: {{imdb.rating}} ⭐⭐⭐⭐⭐⭐⭐⭐⭐
+            <app-rating [rating]="imdb.rating.rate"></app-rating>
+        </p>
         <!-- <p style="color: rgb(230, 230, 61);">{{imdb.imdb_url}}</p> -->
         <a class="btn btn-warning" style="background-color: black; color: gold;" href="{{imdb.imdb_url}}">View on IMDB</a>
 
